@@ -1,0 +1,75 @@
+@import 'mixins/_fonts.scss';
+
+@keyframes inline {
+	0% {
+		font-variation-settings: 'INLN' 100;
+	}
+	
+	100% {
+		font-variation-settings: 'INLN' 750;
+	}
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background: #2e3a42;
+	height: 100%;
+}
+
+h1, h2 {
+	@include decovar;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	letter-spacing: 0.6rem;
+	
+	&:after, &:before {
+		content: attr(data-text);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
+
+h1 {
+	color: #cc6600;
+	font-size: 12vw;
+	font-variation-settings: 'INLN' 200;
+	margin: 10vw auto 1vw;
+	text-shadow: 2px 2px 5px rgba(#a55200, 0.4);
+
+	// Background clip to image
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-image: url(../img/orange.jpg);
+	background-size: 30%;
+	background-repeat: repeat;
+	
+	animation: inline 2s linear infinite alternate;
+}
+
+h2 {
+	color: grey;
+	font-size: 7vw;
+	font-weight: 700;
+	font-variation-settings: 'INLN' 750;
+	margin: 1vw auto;
+}
+
+
+
+
+
