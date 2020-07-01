@@ -7,8 +7,8 @@ const Home = () => (
             <title>Home | Swinburne Dev</title>
             <meta name="description" content="Andy Swinburne dev playground site" />
         </Head>
-        <h1 data-text="Swinburne">Swinburne</h1>
-        <h2 data-text="Development">Development</h2>
+        <h1 data-text="SWINBURNE">SWINBURNE</h1>
+        <h2 data-text="DEVELOPMENT">DEVELOPMENT</h2>
     </Layout>)
 
 export default Home;
