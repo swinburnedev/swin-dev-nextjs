@@ -21,8 +21,9 @@ body {
 
 h1, h2 {
 	@include decovar;
-	position: relative;
-	display: flex;
+	line-height: 1;
+    position: relative;
+    display: inline-block;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
@@ -32,7 +33,7 @@ h1, h2 {
 	
 	&:after, &:before {
 		content: attr(data-text);
-		display: flex;
+		display: inline-block;
 		align-items: center;
 		justify-content: center;
 		width: 100%;
@@ -45,7 +46,6 @@ h1, h2 {
 }
 
 h1 {
-	color: #cc6600;
 	font-size: 12vw;
 	font-variation-settings: 'INLN' 200;
 	margin: 10vw auto 1vw;
@@ -53,10 +53,11 @@ h1 {
 
 	// Background clip to image
 	background-clip: text;
-	-webkit-text-fill-color: transparent;
 	background-image: url(../img/orange.jpg);
-	background-size: 30%;
-	background-repeat: repeat;
+
+	/* Color fallback */
+	color: #cc6600;
+	-webkit-text-fill-color: transparent;
 	
 	animation: inline 2s linear infinite alternate;
 }
@@ -68,8 +69,3 @@ h2 {
 	font-variation-settings: 'INLN' 750;
 	margin: 1vw auto;
 }
-
-
-
-
-
