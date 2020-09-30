@@ -10,6 +10,11 @@
 	}
 }
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
 html {
 	height: 100%;
 }
@@ -24,31 +29,28 @@ h1, h2 {
 	line-height: 1;
     position: relative;
     display: inline-block;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
 	text-align: center;
 	letter-spacing: 0.6rem;
+	width: 100%;
 	
 	&:after, &:before {
 		content: attr(data-text);
 		display: inline-block;
 		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
 		z-index: -1;
 		position: absolute;
 		left: 0;
 		top: 0;
+		text-align: center;
+		width: 100%;
 	}
 }
 
 h1 {
 	font-size: 12vw;
 	font-variation-settings: 'INLN' 200;
-	margin: 10vw auto 1vw;
+	height: 12vw;
+	margin: 25vh auto 1vh;
 	text-shadow: 2px 2px 5px rgba(#a55200, 0.4);
 
 	// Background clip to image
@@ -67,5 +69,63 @@ h2 {
 	font-size: 7vw;
 	font-weight: 700;
 	font-variation-settings: 'INLN' 750;
-	margin: 1vw auto;
+	height: 12vw;
+	margin: 1vh auto;
+}
+
+h3, h4, p {
+	font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+	font-size: 4vw;
+}
+
+h4 {
+	font-size: 3vw;
+}
+
+.icon {
+	width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.icon--white {
+	fill: white;
+}
+
+.u-hidden-visually {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.banner {
+  background-color: #cc6600;
+	clip-path: polygon(0px 0px, 100% 15%, 100% 100%, 0px 85%);
+
+	.inner {
+		padding: 25vh 10vw;
+	}
+
+	h3, h4, p {
+		color: white;
+	}
+
+	display: grid;
+	grid-template-columns: 1fr;
+
+	@media screen and (min-width: 768px) {
+		grid-template-columns: 45% 55%;
+	}
 }
