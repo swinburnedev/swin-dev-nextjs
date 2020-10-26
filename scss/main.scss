@@ -27,8 +27,9 @@ body {
 h1, h2 {
 	@include decovar;
 	line-height: 1;
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
+  font-display: swap;
 	text-align: center;
 	letter-spacing: 0.6rem;
 	width: 100%;
