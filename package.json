@@ -15,15 +15,15 @@
   "license": "ISC",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^14.1.1",
-    "contentful": "^7.14.5",
-    "next": "^9.4.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "contentful": "^7.14.8",
+    "next": "^10.0.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^5.4.0",
-    "contentful-import": "^7.8.7",
-    "sass": "^1.26.9"
+    "contentful-import": "^7.9.14",
+    "sass": "^1.27.0"
   },
   "browserslist": [
     ">0.3%",
